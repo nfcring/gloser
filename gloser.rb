@@ -5,13 +5,14 @@ $gloser = { "fish" => "fisk", "spoon" => "skje", "window" => "vindu",
 
 
 def init
-  puts "Dette er et gloseprogram. Skriv inn utenlandsk til norsk (A) eller motsatt (B)"
-  valg = gets.chomp
+  puts "Dette er et gloseprogram. Skriv inn utenlandsk til norsk (utn) eller motsatt (ntu)"
+  valg = gets.chomp.downcase
   case valg
-  when "A"
-    puts "du valgte A"
-  when "B"
-    puts "du valgte B"
+  when "utn"
+    puts "du valgte UTN"
+  when "ntu"
+    puts "du valgte NTU"
+    
   else
     die("Du valgte et ulovlig valg")
   end
