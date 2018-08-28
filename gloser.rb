@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
 
 $gloser = { "fish" => "fisk", "spoon" => "skje", "window" => "vindu", 
-           "music" => "musikk", "cat" => "katt"}
+           "music" => "musikk", "cat" => "katt", "happy" => "glad"}
 
 
 def init
