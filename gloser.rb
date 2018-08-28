@@ -12,7 +12,6 @@ def init
     puts "du valgte UTN"
   when "ntu"
     puts "du valgte NTU"
-    
   else
     die("Du valgte et ulovlig valg")
   end
