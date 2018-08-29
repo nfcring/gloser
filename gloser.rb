@@ -21,6 +21,7 @@ def init
     clear()
     init()
   end
+  return valg
 end
 
 def clear
@@ -52,5 +53,6 @@ end
 
 clear()
 init()
-pugg_gloser()
+puts valg
+#pugg_gloser()
 #les_fil()
