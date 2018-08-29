@@ -52,7 +52,7 @@ def pugg_gloser
 end
 
 clear()
-init()
+valg = init()
 puts valg
 #pugg_gloser()
 #les_fil()
