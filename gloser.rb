@@ -21,7 +21,7 @@ def init
     clear()
     init()
   end
-  return valg
+  return $valg
 end
 
 def clear
@@ -38,21 +38,34 @@ def pugg_gloser
   antall = 0
   $gloser.each do |utenl,norsk|
     antall += 1
-    puts "Hva er #{utenl} på norsk?"
-    oversettelse = gets.chomp.downcase
-    case oversettelse
-    when norsk
-      puts "riktig"
-      $points+=1
-    else
-      puts "feil, riktig svar er #{norsk}"
+    
+    case $valg
+    when "utn"
+      puts "Hva er #{utenl} på norsk?"
+      oversettelse = gets.chomp.downcase
+      case oversettelse
+      when norsk
+        puts "riktig"
+        $points+=1
+      else
+        puts "feil, riktig svar er #{norsk}"
+      end
+      
+    when "ntu"
+      puts "Hva er #{norsk} på engelsk?"
+      oversettelse = gets.chomp.downcase
+      case oversettelse
+      when utenl
+        puts "riktig"
+        $points+=1
+      else
+        puts "feil, riktig svar er #{utenl}"
+      end
     end
+    puts"#{$points}" + "/" + "#{antall}"
   end
-  puts"#{$points}" + "/" + "#{antall}"
 end
-
 clear()
 valg = init()
-puts valg
-#pugg_gloser()
+pugg_gloser()
 #les_fil()
