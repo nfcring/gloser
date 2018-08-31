@@ -1,0 +1,11 @@
+fish=fisk
+spoon=skje
+window=vindu	
+music=musikk
+cat=katt	
+happy=glad	
+summer=sommer
+winter=vinter	
+dog=hund
+horse=hest
+class=klasse

@@ -9,8 +9,8 @@ $points = 0
 
 def init
   puts "Dette er et gloseprogram. Skriv inn utenlandsk til norsk (utn) eller motsatt (ntu)"
-  valg = gets.chomp.downcase
-  case valg
+  $valg = gets.chomp.downcase
+  case $valg
   when "utn"
     puts "du valgte UTN"
   when "ntu"
@@ -29,8 +29,9 @@ def clear
 end
 
 def les_fil
-  File.open("gloser.txt").each do |line|
-    puts line
+  File.open("gloser.txt").each do |utenl,norsk|
+puts norsk
+    #split("=")|utenl,norsk|
   end
 end
 
@@ -66,6 +67,6 @@ def pugg_gloser
   end
 end
 clear()
-valg = init()
-pugg_gloser()
-#les_fil()
+#valg = init()
+#pugg_gloser()
+les_fil()
