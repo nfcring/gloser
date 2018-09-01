@@ -29,10 +29,11 @@ def clear
 end
 
 def les_fil
-  File.open("gloser.txt").each do |utenl,norsk|
-puts norsk
-    #split("=")|utenl,norsk|
+  File.open("gloser.txt").each do |line|
+    utenl, norsk = line.split("=")
+    #puts "val1=#{val1} og val2=#{val2}"
   end
+  return utenl, norsk
 end
 
 def pugg_gloser
@@ -66,7 +67,10 @@ def pugg_gloser
     puts"#{$points}" + "/" + "#{antall}"
   end
 end
+
+
 clear()
+utenl, norsk = les_fil()
 #valg = init()
 #pugg_gloser()
-les_fil()
+puts norsk
